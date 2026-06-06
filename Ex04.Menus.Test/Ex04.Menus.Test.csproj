@@ -37,6 +37,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="SystemActions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ex04.Menus.Events\Ex04.Menus.Events.csproj">
+      <Project>{9626dc84-7cc4-4ca9-a26b-8e35cf33b248}</Project>
+      <Name>Ex04.Menus.Events</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
