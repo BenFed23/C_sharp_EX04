@@ -10,15 +10,13 @@ namespace Ex04.Menus.Events
 
         public ActionMenu(string i_MenuTitle) : base(i_MenuTitle) 
         {
-
+           
         }
-       
         protected void OnChoseOption()
         {
-            if (choseOption != null)
-            {
-                choseOption.Invoke(this);
-            }
+           
+          choseOption?.Invoke(this);
+           
         }
         public override void Show()
         {

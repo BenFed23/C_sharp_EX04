@@ -53,8 +53,14 @@ namespace Ex04.Menus.Test
                 Console.WriteLine("You entered an empty space try again!");
                 return;
             }
+
             int capitalLettersInSentence = CountAllCapitalLetters(userSentence);
             Console.WriteLine($"There are {capitalLettersInSentence} capital letters in your sentence.");
+        }
+        public void ShowCurrentHour() 
+        {
+            DateTime currentDate = DateTime.Now;
+
         }
 
 
