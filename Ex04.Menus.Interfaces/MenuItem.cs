@@ -11,7 +11,7 @@ namespace Ex04.Menus.Interfaces
             m_MenuTitle = i_MenuTitle;
         }
 
-        public abstract void Selected();
+        public abstract void RunSelected();
 
         public string Title
         {

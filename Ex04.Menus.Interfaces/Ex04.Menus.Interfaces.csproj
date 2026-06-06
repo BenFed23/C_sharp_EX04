@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExecutableMenuItem.cs" />
-    <Compile Include="IMenuItemRunner.cs" />
+    <Compile Include="ISelectionListener.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="SubMenu.cs" />

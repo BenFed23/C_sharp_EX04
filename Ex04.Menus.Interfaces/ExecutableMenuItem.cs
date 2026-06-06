@@ -4,18 +4,18 @@ namespace Ex04.Menus.Interfaces
 {
     public class ExecutableMenuItem : MenuItem
     {
-        private readonly IMenuItemRunner r_ItemRunner;
+        private readonly ISelectionListener r_ItemListener;
 
-        public ExecutableMenuItem(string i_MenuTitle, IMenuItemRunner i_ItemRunner) : base(i_MenuTitle)
+        public ExecutableMenuItem(string i_MenuTitle, ISelectionListener i_ItemListener) : base(i_MenuTitle)
         {
-            r_ItemRunner = i_ItemRunner;
+            r_ItemListener = i_ItemListener;
         }
 
-        public override void Selected()
+        public override void RunSelected ()
         {
-            if(r_ItemRunner != null)
+            if(r_ItemListener != null)
             {
-                r_ItemRunner.Run();
+                r_ItemListener.OnSelected();
             }
         }
     }

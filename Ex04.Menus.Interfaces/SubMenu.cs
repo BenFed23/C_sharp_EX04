@@ -29,7 +29,7 @@ namespace Ex04.Menus.Interfaces
             }
         }
 
-        public override void Selected()
+        public override void RunSelected()
         {
             bool isRunning = true;
 
@@ -55,7 +55,7 @@ namespace Ex04.Menus.Interfaces
                 else if (userChoice > 0 && userChoice <= i_AmountOfOptions)
                 {
                     Console.Clear();
-                    r_SubItems[userChoice - 1].Selected();
+                    r_SubItems[userChoice - 1].RunSelected();
                 }
                 else
                 {
@@ -108,6 +108,5 @@ namespace Ex04.Menus.Interfaces
                 Console.WriteLine($"Please enter your choice (1-{i_AmountOfOptions} or 0 to go back): ");
             }
         }
-
     }
 }
