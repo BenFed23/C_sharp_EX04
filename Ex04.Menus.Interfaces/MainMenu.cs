@@ -18,7 +18,7 @@ namespace Ex04.Menus.Interfaces
 
         public void Show()
         {
-
+            r_MainMenuRoot.Selected();
         }
     }
 }

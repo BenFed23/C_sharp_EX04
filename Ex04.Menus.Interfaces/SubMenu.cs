@@ -100,12 +100,12 @@ namespace Ex04.Menus.Interfaces
             if (r_IsMainMenu)
             {
                 Console.WriteLine("0. Exit");
-                Console.WriteLine($"Please enter your choice (1-{i_AmountOfOptions + 1} or 0 to exit): ");
+                Console.WriteLine($"Please enter your choice (1-{i_AmountOfOptions} or 0 to exit): ");
             }
             else
             {
                 Console.WriteLine("0. Back");
-                Console.WriteLine($"Please enter your choice (1-{i_AmountOfOptions + 1} or 0 to go back): ");
+                Console.WriteLine($"Please enter your choice (1-{i_AmountOfOptions} or 0 to go back): ");
             }
         }
 
