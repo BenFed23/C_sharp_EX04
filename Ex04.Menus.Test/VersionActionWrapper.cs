@@ -14,7 +14,7 @@ namespace Ex04.Menus.Test
 
         public void OnSelected()
         {
-            r_SystemActions.CurrentMenu_ChoseShowVersion(null);
+            r_SystemActions.CurrentMenu_UserChoseShowVersion(null);
         }
     }
 }

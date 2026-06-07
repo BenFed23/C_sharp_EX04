@@ -6,14 +6,11 @@ namespace Ex04.Menus.Events
 {
     public class MainMenu : MenuItem 
     {
-        public MainMenu(string i_MenuTitle) : base(i_MenuTitle)
-        {
+        public MainMenu(string i_MenuTitle) : base(i_MenuTitle) { }
 
-        }
-        protected override void printMenuMessage()
+        protected override void PrintMenuMessage()
         {
-            Console.WriteLine($"Please enter your choice (1-{r_SubMenus.Count} | or 0 to Exit)");
+            Console.WriteLine($"Please enter your choice (1-{r_SubMenus.Count} or 0 to Exit)");
         }
-        
     }
 }

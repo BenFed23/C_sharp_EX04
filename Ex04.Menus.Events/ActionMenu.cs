@@ -6,24 +6,21 @@ namespace Ex04.Menus.Events
 {
     public class ActionMenu : Menu
     {
-        public event Action<ActionMenu> choseOption;
+        public event Action<ActionMenu> ChoseOption;
 
-        public ActionMenu(string i_MenuTitle) : base(i_MenuTitle) 
-        {
+        public ActionMenu(string i_MenuTitle) : base(i_MenuTitle) { }
 
-        }
         protected void OnChoseOption()
         {
-            if (choseOption != null)
+            if (ChoseOption != null)
             {
-                choseOption.Invoke(this);
+                ChoseOption.Invoke(this);
             }
         }
+
         public override void Show()
         {
             OnChoseOption();
-
         }
-
     }
 }

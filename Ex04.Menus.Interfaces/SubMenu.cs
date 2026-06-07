@@ -7,6 +7,7 @@ namespace Ex04.Menus.Interfaces
     {
         private readonly List<MenuItem> r_SubItems = new List<MenuItem>();
         private readonly bool r_IsMainMenu;
+        protected const int k_ExitOrGoingBack = 0;
 
         public SubMenu(string i_MenuTitle, bool i_IsMainMenu = false) : base(i_MenuTitle)
         {
@@ -36,7 +37,7 @@ namespace Ex04.Menus.Interfaces
             while(isRunning)
             {
                 int amountOfItems = r_SubItems.Count;
-                printMenu(amountOfItems);
+                PrintMenu(amountOfItems);
                 string userInput = Console.ReadLine();
                 validateUserChoiceInput(userInput, amountOfItems, out isRunning);
             }
@@ -48,11 +49,11 @@ namespace Ex04.Menus.Interfaces
 
             if (int.TryParse(i_UserInput, out int userChoice))
             {
-                if(userChoice == 0)
+                if(userChoice == k_ExitOrGoingBack)
                 {
                     i_IsRunning = false;
                 }
-                else if (userChoice > 0 && userChoice <= i_AmountOfOptions)
+                else if (userChoice > k_ExitOrGoingBack && userChoice <= i_AmountOfOptions)
                 {
                     Console.Clear();
                     r_SubItems[userChoice - 1].RunSelected();
@@ -74,7 +75,7 @@ namespace Ex04.Menus.Interfaces
             Console.ReadKey();
         }
 
-        private void printMenu(int i_AmountOfOptions)
+        private void PrintMenu(int i_AmountOfOptions)
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
