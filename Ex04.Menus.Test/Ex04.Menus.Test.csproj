@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -36,14 +36,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapitalsActionWrapper.cs" />
+    <Compile Include="DateActionWrapper.cs" />
     <Compile Include="MenuDllTester.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="SystemActions.cs" />
+    <Compile Include="TimeActionWrapper.cs" />
+    <Compile Include="VersionActionWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ex04.Menus.Events\Ex04.Menus.Events.csproj">
       <Project>{9626dc84-7cc4-4ca9-a26b-8e35cf33b248}</Project>
       <Name>Ex04.Menus.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.csproj">
+      <Project>{41cd2e52-eb9e-424e-802b-db0adf9ba28b}</Project>
+      <Name>Ex04.Menus.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

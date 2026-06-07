@@ -8,7 +8,8 @@ namespace Ex04.Menus.Test
         public static void Main()
         {
             MenuDllTester newTest = new MenuDllTester();
-            newTest.EventsMenuTester();
+            //newTest.EventsMenuTester();
+            newTest.InterfaceMenuTester();
         }
       
     }
