@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 
 namespace Ex04.Menus.Events
@@ -66,8 +67,7 @@ namespace Ex04.Menus.Events
                     Console.WriteLine($"{i + 1}. {r_SubMenus[i].Title}");
                 }
             }
-            Console.WriteLine($"0. Exit");
-
+            printZeroOption();
             PrintMenuMessage();
         }
 
@@ -75,6 +75,10 @@ namespace Ex04.Menus.Events
         {
             Console.WriteLine($"Please enter your choice (1-{r_SubMenus.Count} or 0 to go back):");
             Console.Write(">> ");
+        }
+        protected virtual void printZeroOption() 
+        {
+            Console.WriteLine($"0. Go back");
         }
 
         private bool checkIfUserInputIsVailid(out int o_UserChoice)
