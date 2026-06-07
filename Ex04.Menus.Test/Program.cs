@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Ex04.Menus.Events;
 
 namespace Ex04.Menus.Test
 {
@@ -7,7 +7,7 @@ namespace Ex04.Menus.Test
     {
         public void Main()
         {
-           
+           MainMenu = new MainMenu();
         }
       
     }

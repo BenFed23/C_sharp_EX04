@@ -10,12 +10,12 @@ namespace Ex04.Menus.Test
         public void  CurrentMenu_UserChoseShowTime(ActionMenu i_CurrentMenu)
         {
             Console.Clear();
-            //ShowCurrentTime();
+            ShowCurrentTime();
         }
         public void CurrentMenu_UserChoseShowDate(ActionMenu i_CurrentMenu)
         {
             Console.Clear();
-            //ShowCurrentDate();
+            ShowCurrentDate();
         }
         public void CurrentMenu_UserChoseCountCapaital(ActionMenu i_CurrentMenu)
         {
@@ -57,11 +57,17 @@ namespace Ex04.Menus.Test
             int capitalLettersInSentence = CountAllCapitalLetters(userSentence);
             Console.WriteLine($"There are {capitalLettersInSentence} capital letters in your sentence.");
         }
-        public void ShowCurrentHour() 
+        public void ShowCurrentTime() 
         {
             DateTime currentDate = DateTime.Now;
-
+            Console.WriteLine($"The current time is: {currentDate:HH:mm}");
         }
+        public void ShowCurrentDate() 
+        {
+            DateTime currentDate = DateTime.Now;
+            Console.WriteLine($"The current date is: {currentDate:dd/MM/yy}");
+        }
+
 
 
     }
