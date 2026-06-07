@@ -63,6 +63,7 @@ namespace Ex04.Menus.Events
                     Console.WriteLine($"{i + 1}. {r_SubMenus[i].Title}");
                 }
             }
+            Console.WriteLine($"0. Exit");
 
             printMenuMessage();
         }
