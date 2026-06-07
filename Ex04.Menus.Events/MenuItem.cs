@@ -15,18 +15,20 @@ namespace Ex04.Menus.Events
         }
         public override void Show()
         {
-            bool k_getOutOfMenu = true;
+            bool k_getOutOfMenu = false;
             int userChoice = k_NoValueBeenGiven;
             try 
             {
-                while (k_getOutOfMenu == true)
+                while (k_getOutOfMenu == false)
                 {
                     Console.Clear();
                     printMenu();
                     userChoice = int.Parse(Console.ReadLine());
                     if(userChoice == k_ExitOrGoingBack)//add vlidation check
                     {
-                        k_getOutOfMenu= false;
+                        Console.Clear() ;
+                        Console.WriteLine("Hope you come back soon");
+                        k_getOutOfMenu= true;
                     }
                     else
                     {

@@ -29,5 +29,9 @@ namespace Ex04.Menus.Test
             eventsMainMenu.Show();
             return eventsMainMenu;
         }
+        public Ex04.Menus.Interfaces.MainMenu InterfacesMenuTest()
+        {
+
+        }
     }
 }
