@@ -12,7 +12,9 @@ namespace Ex04.Menus.Events
         {
             m_Title = i_MenuTitle;
         }
+
         public abstract void Show();
+
         public string Title 
         {
             get
