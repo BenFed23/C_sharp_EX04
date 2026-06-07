@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ex04.Menus.Interfaces;
+using System;
 using System.Collections.Generic;
 
 
@@ -28,6 +29,26 @@ namespace Ex04.Menus.Test
             CountCapitals.choseOption += actions.CurrentMenu_UserChoseCountCapaital;
             eventsMainMenu.Show();
             return eventsMainMenu;
+        }
+
+        public Ex04.Menus.Interfaces.MainMenu InterfaceMenuTester()
+        {
+            SystemActions actions = new SystemActions();
+            Ex04.Menus.Interfaces.MainMenu interfaceMainMenu = new MainMenu("Interfaces Main Menu");
+            Ex04.Menus.Interfaces.SubMenu dateAndTimeMenu = new SubMenu("Show Current Date/Time");
+            Ex04.Menus.Interfaces.SubMenu versionAndCapitalsMenu = new SubMenu("Version and Capitals");
+            interfaceMainMenu.AddMenuItem(dateAndTimeMenu);
+            interfaceMainMenu.AddMenuItem(versionAndCapitalsMenu);
+            Ex04.Menus.Interfaces.ExecutableMenuItem ShowCurrentTime = new Ex04.Menus.Interfaces.ExecutableMenuItem("Show Current Time", new TimeActionWrapper(actions));
+            Ex04.Menus.Interfaces.ExecutableMenuItem ShowCurrentDate = new Ex04.Menus.Interfaces.ExecutableMenuItem("Show Current Date", new DateActionWrapper(actions));
+            Ex04.Menus.Interfaces.ExecutableMenuItem ShowVersion = new Ex04.Menus.Interfaces.ExecutableMenuItem("Show Version", new VersionActionWrapper(actions));
+            Ex04.Menus.Interfaces.ExecutableMenuItem CountCapitals = new Ex04.Menus.Interfaces.ExecutableMenuItem("Show Capitals", new CapitalsActionWrapper(actions));
+            dateAndTimeMenu.AddMenuItem(ShowCurrentTime);
+            dateAndTimeMenu.AddMenuItem(ShowCurrentDate);
+            versionAndCapitalsMenu.AddMenuItem(ShowVersion);
+            versionAndCapitalsMenu.AddMenuItem(CountCapitals);
+            interfaceMainMenu.Show();
+            return interfaceMainMenu;
         }
     }
 }

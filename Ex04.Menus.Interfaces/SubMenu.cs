@@ -92,7 +92,7 @@ namespace Ex04.Menus.Interfaces
             }
 
             printLastOptionAndUserChoiceRequest(i_AmountOfOptions);
-            Console.Write(">>");
+            Console.Write(">> ");
         }
 
         private void printLastOptionAndUserChoiceRequest(int i_AmountOfOptions)
