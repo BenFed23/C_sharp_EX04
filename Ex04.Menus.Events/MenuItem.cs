@@ -32,8 +32,6 @@ namespace Ex04.Menus.Events
                     {
                         r_SubMenus[userChoice].Show();
                     }
-
-                   
                 }
             }
             catch
