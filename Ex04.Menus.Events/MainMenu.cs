@@ -10,7 +10,8 @@ namespace Ex04.Menus.Events
 
         protected override void PrintMenuMessage()
         {
-            Console.WriteLine($"Please enter your choice (1-{r_SubMenus.Count} or 0 to Exit)");
+            Console.WriteLine($"Please enter your choice (1-{r_SubMenus.Count} or 0 to exit):");
+            Console.Write(">> ");
         }
     }
 }

@@ -39,7 +39,7 @@ namespace Ex04.Menus.Events
                 }
                 else
                 {
-                    Console.WriteLine("invalid choice try again!");
+                    Console.WriteLine("Invalid input. Press any key to return to the menu...");
                     Console.ReadKey();
                 }
             }
@@ -72,7 +72,8 @@ namespace Ex04.Menus.Events
 
         protected virtual void PrintMenuMessage()
         {
-            Console.WriteLine($"Please enter your choice (1-{r_SubMenus.Count} or 0 to go back)");
+            Console.WriteLine($"Please enter your choice (1-{r_SubMenus.Count} or 0 to go back):");
+            Console.Write(">> ");
         }
 
         private bool checkIfUserInputIsVailid(out int o_UserChoice)

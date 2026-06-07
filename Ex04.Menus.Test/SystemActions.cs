@@ -20,7 +20,7 @@ namespace Ex04.Menus.Test
         {
             Console.Clear();
             DateTime currentTime = DateTime.Now;
-            Console.WriteLine($"> Current Date is {currentTime:dd/MM/yy}");
+            Console.WriteLine($"> Current Date is {currentTime:dd/MM/yyyy}");
             returnToMenuMessage();
         }
 

@@ -43,15 +43,15 @@ namespace Ex04.Menus.Interfaces
             }
         }
 
-        private void validateUserChoiceInput(string i_UserInput, int i_AmountOfOptions, out bool i_IsRunning)
+        private void validateUserChoiceInput(string i_UserInput, int i_AmountOfOptions, out bool o_IsRunning)
         {
-            i_IsRunning = true;
+            o_IsRunning = true;
 
             if (int.TryParse(i_UserInput, out int userChoice))
             {
                 if(userChoice == k_ExitOrGoingBack)
                 {
-                    i_IsRunning = false;
+                    o_IsRunning = false;
                 }
                 else if (userChoice > k_ExitOrGoingBack && userChoice <= i_AmountOfOptions)
                 {
