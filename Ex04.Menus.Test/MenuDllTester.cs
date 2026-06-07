@@ -21,8 +21,12 @@ namespace Ex04.Menus.Test
             Ex04.Menus.Events.ActionMenu CountCapitals = new Ex04.Menus.Events.ActionMenu("Count Capitals");
             eventsShowVersionAndCapitalsMenu.AddSubMenu(ShowVersion);
             eventsShowVersionAndCapitalsMenu.AddSubMenu(CountCapitals);
+            SystemActions actions = new SystemActions();
+            ShowCurrentTime.choseOption += actions.CurrentMenu_UserChoseShowTime;
+            ShowCurrentDate.choseOption += actions.CurrentMenu_UserChoseShowDate;
+            ShowVersion.choseOption += actions.CurrentMenu_ChoseShowVersion;
+            CountCapitals.choseOption += actions.CurrentMenu_UserChoseCountCapaital;
             eventsMainMenu.Show();
-
             return eventsMainMenu;
         }
     }

@@ -13,12 +13,16 @@ namespace Ex04.Menus.Test
             Console.Clear();
             DateTime currentTime = DateTime.Now;
             Console.WriteLine($"currentTime: {currentTime:HH:mm:ss}");
+            Console.WriteLine("Press any key to return to menu...");
+            Console.ReadKey();
         }
         public void CurrentMenu_UserChoseShowDate(ActionMenu i_CurrentMenu)
         {
             Console.Clear();
             DateTime currentTime = DateTime.Now;
-            Console.WriteLine($"currentTime: {currentTime:dd:MM:yy}");
+            Console.WriteLine($"current Date: {currentTime:dd:MM:yy}");
+            Console.WriteLine("Press any key to return to menu...");
+            Console.ReadKey();
         }
         public void CurrentMenu_UserChoseCountCapaital(ActionMenu i_CurrentMenu)
         {
@@ -33,6 +37,8 @@ namespace Ex04.Menus.Test
         public void ShowVersion()
         {
             Console.WriteLine("App Version: 26.2.4.7310");
+            Console.WriteLine("Press any key to return to menu...");
+            Console.ReadKey();
         }
         public int CountAllCapitalLetters(string i_iuerInputSentence)
         {
@@ -58,6 +64,8 @@ namespace Ex04.Menus.Test
             }
             int capitalLettersInSentence = CountAllCapitalLetters(userSentence);
             Console.WriteLine($"There are {capitalLettersInSentence} capital letters in your sentence.");
+            Console.WriteLine("Press any key to return to menu...");
+            Console.ReadKey();
         }
 
 
