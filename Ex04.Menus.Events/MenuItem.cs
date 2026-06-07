@@ -78,7 +78,7 @@ namespace Ex04.Menus.Events
         }
         protected virtual void printZeroOption() 
         {
-            Console.WriteLine($"0. Go back");
+            Console.WriteLine($"0. Back");
         }
 
         private bool checkIfUserInputIsVailid(out int o_UserChoice)
