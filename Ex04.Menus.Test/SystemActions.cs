@@ -12,7 +12,7 @@ namespace Ex04.Menus.Test
         {
             Console.Clear();
             DateTime currentTime = DateTime.Now;
-            Console.WriteLine($"currentTime: {currentTime:HH:mm:ss}");
+            Console.WriteLine($"> Current Time is {currentTime:HH:mm:ss}");
             Console.WriteLine("Press any key to return to menu...");
             Console.ReadKey();
         }
@@ -20,7 +20,7 @@ namespace Ex04.Menus.Test
         {
             Console.Clear();
             DateTime currentTime = DateTime.Now;
-            Console.WriteLine($"current Date: {currentTime:dd:MM:yy}");
+            Console.WriteLine($"> Current Date is {currentTime:dd/MM/yy}");
             Console.WriteLine("Press any key to return to menu...");
             Console.ReadKey();
         }
@@ -63,11 +63,9 @@ namespace Ex04.Menus.Test
                 return;
             }
             int capitalLettersInSentence = CountAllCapitalLetters(userSentence);
-            Console.WriteLine($"There are {capitalLettersInSentence} capital letters in your sentence.");
+            Console.WriteLine($"> There are {capitalLettersInSentence} uppercase letters in your text");
             Console.WriteLine("Press any key to return to menu...");
             Console.ReadKey();
         }
-
-
     }
 }

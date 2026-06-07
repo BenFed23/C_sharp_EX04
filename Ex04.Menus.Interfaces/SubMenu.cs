@@ -70,13 +70,8 @@ namespace Ex04.Menus.Interfaces
 
         private void handleInvalidInput()
         {
-            printInvalidInputMessage();
-            Console.ReadLine();
-        }
-
-        private void printInvalidInputMessage()
-        {
-            Console.WriteLine("Invalid input. Please try again");
+            Console.WriteLine("Invalid input. Press any key to return to the menu...");
+            Console.ReadKey();
         }
 
         private void printMenu(int i_AmountOfOptions)
