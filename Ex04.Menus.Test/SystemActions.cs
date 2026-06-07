@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Ex04.Menus.Test
 {
-    internal class SystemActions
+    public class SystemActions
     {
         public void  CurrentMenu_UserChoseShowTime(ActionMenu i_CurrentMenu)
         {
