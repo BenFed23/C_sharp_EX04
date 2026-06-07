@@ -12,7 +12,6 @@ namespace Ex04.Menus.Events
         {
 
         }
-       
         protected void OnChoseOption()
         {
             if (choseOption != null)
@@ -23,6 +22,7 @@ namespace Ex04.Menus.Events
         public override void Show()
         {
             OnChoseOption();
+
         }
 
     }

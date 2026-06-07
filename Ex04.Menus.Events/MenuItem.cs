@@ -15,33 +15,33 @@ namespace Ex04.Menus.Events
         }
         public override void Show()
         {
-            bool k_getOutOfMenu = false;
+            bool MenuIsruninng = true;
             int userChoice = k_NoValueBeenGiven;
-            try 
+
+            while (MenuIsruninng == true)
             {
-                while (k_getOutOfMenu == false)
+                Console.Clear();
+                printMenu();
+                if (checkIfUserInputIsVailid(out userChoice))
                 {
-                    Console.Clear();
-                    printMenu();
-                    userChoice = int.Parse(Console.ReadLine());
-                    if(userChoice == k_ExitOrGoingBack)//add vlidation check
+                    if (userChoice == k_ExitOrGoingBack)
                     {
-                        Console.Clear() ;
-                        Console.WriteLine("Hope you come back soon");
-                        k_getOutOfMenu= true;
+                        Console.Clear();
+                        Console.WriteLine("Hope to see you soon!");
+                        MenuIsruninng = false; 
                     }
                     else
                     {
-                        r_SubMenus[userChoice-1].Show();
+                        r_SubMenus[userChoice - 1].Show();
                     }
-
-                   
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice try again!");
+                    Console.ReadKey();
                 }
             }
-            catch
-            {
 
-            } 
         }
         public void AddSubMenu(Menu i_SubMenu)
         {
@@ -60,15 +60,35 @@ namespace Ex04.Menus.Events
             {
                 for (int i = 0; i < r_SubMenus.Count; i++)
                 {
-                    Console.WriteLine($"{i + 1}. {r_SubMenus[i].Tytle}");
+                    Console.WriteLine($"{i + 1}. {r_SubMenus[i].Title}");
                 }
             }
+
             printMenuMessage();
-            
         }
         protected virtual void printMenuMessage()
         {
             Console.WriteLine($"Please enter your choice (1-{r_SubMenus.Count} | or 0 to go back)");
+        }
+        private bool checkIfUserInputIsVailid(out int userChoice)
+        {
+            bool inputIsValid = false;
+            string userInput = Console.ReadLine();
+            if (int.TryParse(userInput, out userChoice) && userChoice >= 0 && userChoice <= r_SubMenus.Count)
+            {
+               inputIsValid = true;
+            }
+            else 
+            {
+                userChoice = k_NoValueBeenGiven;
+                
+            }
+
+            return inputIsValid;
+                
+           
+
+
         }
     }
 }
