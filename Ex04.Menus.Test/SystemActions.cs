@@ -1,6 +1,7 @@
 ﻿using Ex04.Menus.Events;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 
 
 namespace Ex04.Menus.Test
@@ -10,12 +11,14 @@ namespace Ex04.Menus.Test
         public void  CurrentMenu_UserChoseShowTime(ActionMenu i_CurrentMenu)
         {
             Console.Clear();
-            //ShowCurrentTime();
+            DateTime currentTime = DateTime.Now;
+            Console.WriteLine($"currentTime: {currentTime:HH:mm:ss}");
         }
         public void CurrentMenu_UserChoseShowDate(ActionMenu i_CurrentMenu)
         {
             Console.Clear();
-            //ShowCurrentDate();
+            DateTime currentTime = DateTime.Now;
+            Console.WriteLine($"currentTime: {currentTime:dd:MM:yy}");
         }
         public void CurrentMenu_UserChoseCountCapaital(ActionMenu i_CurrentMenu)
         {
